@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анна & Полина | Приглашение на др</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #b30000;
+            color: #ffffff;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           background-color: rgb(199, 0, 0);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e8e2d9;
+        }
+
+        .main-title {
+            font-family: 'Cormorant Garamond', serif; 
+            position: absolute; 
+            top: 5%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            color: white;
+            font-size: 150px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+ 
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: #fffefe;
+            margin-bottom: 30px;
+        }
+
+        .couple-names {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin: 40px 0;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .invitation-text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 40px 0;
+            padding: 0 20px;
+            line-height: 1.8;
+            color: #fffdfd;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .date-section {
+            text-align: center;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .date-box {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: #ffffff;
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .date-box::before,
+        .date-box::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 1px;
+            background-color: #ffffff;
+        }
+
+        .date-box::before {
+            right: 100%;
+        }
+
+        .date-box::after {
+            left: 100%;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+            margin: 60px 0 30px;
+            color: #ffffff;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background-color: #ffffff;
+        }
+
+        .location-details {
+            margin-bottom: 40px;
+        }
+
+        .location-item {
+            margin-bottom: 35px;
+            padding: 0 20px;
+        }
+
+        .location-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .location-address {
+            font-size: 1.1rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 0 20px;
+        }
+
+        .timeline-time {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 500;
+            min-width: 100px;
+            color: #ffffff;
+            margin-right: 30px;
+        }
+
+        .timeline-details {
+            flex: 1;
+        }
+
+        .timeline-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .timeline-address {
+            font-size: 20px;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .dress-code {
+            background-color: #ee000000;
+            border: 2px solid black;
+            padding: 35px 30px;
+            margin: 40px 0;
+            border-radius: 60px;
+            font-size: 24px;
+        }
+
+
+        .dress-code p {
+            margin-bottom: 20px;
+            font-size: 50px;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+
+
+        .details {
+            margin: 50px 0;
+            padding: 0 20px;
+        }
+
+        .details p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+
+        .contact-info {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .rsvp-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 40px auto 60px;
+            padding: 18px 30px;
+            background-color: #ffffff;
+            color: #b10000;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .rsvp-button:hover {
+            background-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e8e2d9;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .q {
+             font-family: 'Cormorant Garamond', serif;
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        .date-highlight {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            width: 200px;
+
+        }
+
+        .date-highlight .day {
+            font-size: 40px;
+            color: #ffffff;
+            align-items: center;
+
+
+        }
+        .a {color: #b30000;}
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.8rem;
+            }
+            
+            .couple-names {
+                font-size: 1.8rem;
+            }
+            
+            .date-box {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-time {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            
+            .date-box::before,
+            .date-box::after {
+                width: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .date-box {
+                font-size: 1.8rem;
+            }
+            
+            .date-box::before,
+            .date-box::after {
+                width: 30px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="main-title">18</h1>
+        <img src="l.png" width="700px">
+    </div>
+
+    <div class="invitation-text">
+       <div class="q"> ДОРОГИЕ ДРУЗЬЯ И РОДНЫЕ!</div><br>
+        Совсем скоро наступит особенный для нас день - нам исполниться 18 лет! Мы бы очень хотели отметить
+        этот день с вами, нашими близкими и дорогими людьми.
+    </div>
+<br>
+
+    <div class="date-highlight">
+        <div class="day">16 | января | 26</div>
+    </div>
+    <h2 class="section-title">LOCATION</h2>
+    
+    <div class="location-details">
+        <div class="location-item">
+            <div class="location-name">Speakeasy bar "THE"</div>
+            <div class="location-address">Отель Wawelberg,<br>Невский проспект, 7-9</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">TIMING</h2>
+    
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-time">16:30 <br> <img src="i (5).png" width="60px"></div>
+            <div class="timeline-details">
+                <div class="timeline-title">  Сбор гостей</div>
+                 <div class="timeline-address">Ожидание праздника!</div>
+                
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-time">17:00 <br> <img src="i (6).png" width="60px"></div>
+            <div class="timeline-details">
+                <div class="timeline-title">Начало</div>
+                 <div class="timeline-address">Банкет.Музыка.Тосты</div>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-time">21:00 <br> <img src="i (7).png" width="60px"></div>
+            <div class="timeline-details">
+                <div class="timeline-title">Праздничный торт</div>
+                 <div class="timeline-address">Торжественный момент, задуваются свечи</div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">POGILANIA</h2>
+    
+    <div class="dress-code">
+        <p><center>Главное для нас - ваше внимание,<br> а радость доставит любой подарок<br> в конверте.</p>
+       <img src="i (4).png" width="60px"></center>
+    </div>
+
+    <h2 class="section-title">DETAILS</h2>
+    
+    <div class="details">
+        <p>По всем вопросам связанных с поздравлениями можно обращаться к нашему ведущему <a href="https://vk.com/olga8boss"> Ольге</a>
+        <p>Пожалуйста, подтвердите своё присутствие до 6 января, чтобы мы могли планировать наш праздник наилучшим образом</p>
+    </div>
+
+   <div class="a"> <a href="https://vk.com/id500460573" class="rsvp-button">Напишите пж</a></div>
+
+    <div class="footer">
+        <p>С любовью, Анна и Полина</p>
+        <p>16 января 2026 года</p>
+    </div>
+</body>
+</html>
